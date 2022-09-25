@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+    --width-mobile:375px;
+    --width-desktop:1440px;
+
+    --primary-color:hsl(0, 100%, 74%);
+    --primary-color2:hsl(154, 59%, 51%);
+
+    --accent-blue:hsl(248, 32%, 49%);
+
+    --neutral-color:hsl(249, 10%, 26%);
+    --neutral-color2:hsl(246, 25%, 77%);
+
+    --fz:16px;
+    --fw-regular:400;
+    --fw-medium:500;
+    --fw-semibold:600;
+    --fw-bold:700;
+    --ff:'Poppins', sans-serif;
+}
+
+html, body{
+    margin: 0;
+    font-size: var(--fz);
+    font-family: var(--ff);
+    line-height: 1.1;
+    display: grid;
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-image: url("../images/bg-intro-mobile.png");
+    background-color: var(--primary-color);
+}
+/* ----------- General ----------- */
+.button{
+    color: white;
+    border-radius:8px;
+    line-height: 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+/* ----------- Main ----------- */
+#app{
+    max-width: var(--width-mobile);
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    max-width: 90%;
+}
+.container {
+    display: grid;
+    width: 90%;
+    gap: 8%;
+    margin: 0 auto;
+}
+/* ----------- Header ----------- */
+header{padding-top: 10%;}
+header p{
+    font-size: 1.1em;
+    line-height: 30px;
+}
+
+/* ----------- Try it free - button  ----------- */
+.try-it-button{
+    background-color: var(--accent-blue);
+    margin: 0 auto;
+    line-height: 47px;
+    padding: 5% 5%;
+    box-sizing: border-box;
+    -webkit-box-shadow: 2px 11px 5px -3px rgba(51,51,51,0.45);
+    -moz-box-shadow: 2px 11px 5px -3px rgba(51,51,51,0.45);
+    box-shadow: 2px 11px 5px -3px rgba(51,51,51,0.45);
+}
+
+/* ----------- Form  ----------- */
+.claim-free-form{
+    background-color: white;
+    margin: 0 auto;
+    padding: 7%;
+    border-radius:8px;
+    display: grid;
+    height: 100%;
+    -webkit-box-shadow: 2px 11px 5px -3px rgba(51,51,51,0.47);
+    -moz-box-shadow: 2px 11px 5px -3px rgba(51,51,51,0.47);
+    box-shadow: 2px 11px 5px -3px rgba(51,51,51,0.47);
+}
+
+.claim-free-form input {
+    padding: 10px 15px;
+    margin: 7px 0px;
+    border-radius: 4px;
+}
+.claim-free-form input, .claim-free-form input:focus{
+    border: 1px solid var(--neutral-color2)
+}
+.claim-free-form input::placeholder{
+    font-family: var(--ff);
+    font-weight: var(--fw-semibold);
+}
+.claim-free-form label{
+    color: var(--neutral-color2);
+    font-size: 0.7em;
+    padding: 5% 0 0;
+    line-height: 20px;
+}
+.claim-free-form label a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: var(--fw-bold);
+}
+.claim-free{
+    min-height: 50px;
+    background-color: var(--primary-color2);
+    border: none;
+    font-family: var(--ff);
+    text-transform: uppercase;
+    margin-top: 3%;
+    top: 0.4em;
+    box-shadow: 0 0.2em #51a384;
+}
+
+
+
+/* ----------- Desktop  ----------- */
+@media (min-width: 750px) {
+    body{
+        background-image: url("../images/bg-intro-desktop.png");
+    }
+    #app{
+        max-width: var(--width-desktop);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        column-gap: 8%;
+        padding: 5%;
+    }
+
+    header {padding: unset;text-align: left;}
+
+header h1 {
+    font-size: 4em;
+}
+
+header p {
+    font-size: 1.4em;
+}
+
+.try-it-button {
+    min-height: unset;
+    padding: 2% 0;
+    width: 100%;
+}
+
+.claim-free-form {
+    width: 90%;
+    padding: 5%;
+}
+    
+    .container {width: 100%;}
+}
