@@ -132,15 +132,16 @@ header p{
     }
     #app{
         max-width: var(--width-desktop);
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         align-items: center;
         padding: 5%;
     }
 
-    header {padding: unset;text-align: left;padding-right: 10%;}
+    header {padding: unset;text-align: left;padding-right: 4%;}
 
 header h1 {
-    font-size: 3.5em;
+    font-size: 4em;
 }
 
 header p {
@@ -150,11 +151,11 @@ header p {
 .try-it-button {
     min-height: unset;
     padding: 2% 0;
-    width: 100%;
+    width: 90%;
 }
 
 .claim-free-form {
-    width: 90%;
+    width: 80%;
     padding: 5%;
 }
     
